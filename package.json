@@ -1,0 +1,25 @@
+{
+  "name": "texuireadme",
+  "version": "1.0.0",
+  "description": "一个texUI组件库使用的介绍文档",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "vuepress": "^1.7.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"vuepress dev docs",
+    "build":"vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuehuabuleng/texUIreadme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cuehuabuleng/texUIreadme/issues"
+  },
+  "homepage": "https://github.com/cuehuabuleng/texUIreadme#readme"
+}
