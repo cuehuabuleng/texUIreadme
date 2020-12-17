@@ -4,7 +4,7 @@ heroImage: /02.png
 heroText: tex-ui组件库使用文档
 tagline: 东方根号三
 actionText: 快速开始 →
-actionLink: /pages/button/
+actionLink: /pages/install/install
 features:
 - title: 墨菲定律
   details: 如果有两种或者两种以上的方式去做某件事情，而其中一种选择方式将导致灾难，则必定有人会做出这种选择————爱德华.墨菲
