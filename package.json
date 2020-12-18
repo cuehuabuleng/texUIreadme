@@ -3,14 +3,20 @@
   "version": "1.0.0",
   "description": "一个texUI组件库使用的介绍文档",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "element-ui": "^2.14.1",
+    "highlight.js": "^10.4.1"
+  },
   "devDependencies": {
+    "highlight": "^0.2.4",
+    "vue-highlight": "^0.0.0",
+    "vue-highlight.js": "^3.1.0",
     "vuepress": "^1.7.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"vuepress dev docs",
-    "build":"vuepress build docs"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
