@@ -255,9 +255,6 @@
         }
       });
     },
-    mounted() {
-      console.log(this.$el.getElementsByClassName('highlight')[0])
-    },
     beforeDestroy() {
       this.removeScrollHandler();
     }

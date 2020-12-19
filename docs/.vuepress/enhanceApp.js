@@ -1,3 +1,15 @@
+import Vue from 'vue'
+// import VueHighlightJS from 'vue-highlight.js';
+// import 'highlight.js/styles/dark.css';
+import 'highlight.js/styles/tomorrow-night.css' 
+import hljs from 'highlight.js'
+Vue.directive('highlight',function (el) {
+  let blocks = el.querySelectorAll('pre code');
+  blocks.forEach((block) => {
+    console.log(block)
+    hljs.highlightBlock(block)
+  })
+})
 export default ({
     Vue, // VuePress 正在使用的 Vue 构造函数
     options, // 附加到根实例的一些选项
@@ -6,5 +18,6 @@ export default ({
     isServer // 当前应用配置是处于 服务端渲染 或 客户端
   }) => {
     // ...做一些其他的应用级别的优化
-    // Vue.use(hljs.vuePlugin)
+    // Vue.use(VueHighlightJS)
+   
   }
