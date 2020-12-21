@@ -16,7 +16,11 @@ export default {
        <tex-button type="warning">警告按钮</tex-button>
        <tex-button type="danger">危险按钮</tex-button>
      </div>
-</template>`.replace(/^s*/gm, '').trim()
+</template>
+<script>`,
+btnjs:`export default {
+         methods: {},
+        }`
     }
   },
   methods: {
@@ -42,10 +46,11 @@ export default {
       <btn />
     </div>
     <div class="highlight" slot="highlight" >
-      desciption
+      <!-- desciption -->
       <pre v-highlight>
               <code class="language-html">{{bthtml}}</code>
-          </pre>
+              <code class="language-javascript">{{btnjs}}</code>
+        </pre>
     </div>
   </demo-block>
 </template>

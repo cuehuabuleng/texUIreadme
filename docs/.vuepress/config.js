@@ -1,3 +1,4 @@
+const path = require('path')
 module.exports = {
     title: 'tex-ui组件库的使用文档',
     description: '基于vue3.0开发',
@@ -54,6 +55,11 @@ module.exports = {
                     }
                 ]
             }
-        ]
+        ],
+        postcss: [require('autoprefixer')],
+        // 配置less的使用配置
+        less:{
+            paths: [path.resolve(__dirname, "node_modules")]
+        }
     }
 }
