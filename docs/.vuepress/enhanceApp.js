@@ -1,4 +1,5 @@
 // import Vue from 'vue'
+// 这个是用vue2.x打包过来的lib
 import TexUI from 'tex-ui'
 import 'highlight.js/styles/tomorrow-night.css' 
 import hljs from 'highlight.js'

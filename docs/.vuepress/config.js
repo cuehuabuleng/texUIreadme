@@ -10,7 +10,14 @@ module.exports = {
         nav: [
             { text: '首页', link: '/', icon: 'reco-home' },
             { text: '博客网站', link: 'http://114.55.93.74:8014/', icon: 'reco-blog' },
-            { text: 'github', link: 'https://github.com/cuehuabuleng/tex-ui', icon: 'reco-github' }
+            { text: 'github', link: 'https://github.com/cuehuabuleng/tex-ui', icon: 'reco-github' },
+            {
+                text: '版本选择',
+                items: [
+                    { text: 'vue2.x', link: '/pages/install/install' },
+                    { text: 'vue3.0', link: '/pages1/install/install' }
+                ]
+            }
         ],
         sidebar: [
             {
@@ -58,7 +65,7 @@ module.exports = {
         ],
         postcss: [require('autoprefixer')],
         // 配置less的使用配置
-        less:{
+        less: {
             paths: [path.resolve(__dirname, "node_modules")]
         }
     }
