@@ -14,8 +14,8 @@ module.exports = {
             {
                 text: '版本选择',
                 items: [
-                    { text: 'vue2.x', link: '/pages/install/install' },
-                    { text: 'vue3.0', link: '/pages1/install/install' }
+                    { text: 'vue3.0', link: '/pages/install/install' },
+                    { text: 'vue2.x', link: '/pages1/install/install' }
                 ]
             }
         ],
@@ -33,14 +33,7 @@ module.exports = {
                 collapsable: false,
                 children: [
                     'pages/button/button',
-                    {
-                        title: 'form 表单',
-                        collapsable: true,
-                        children: [
-                            'pages/form/form',
-                            'pages/form/formitem'
-                        ]
-                    },
+                    'pages/form/form',
                     'pages/dialog/dialog',
                     {
                         title: 'checkbox 多选框',

@@ -25,10 +25,6 @@
 <script>
 export default {
   name: "TexDialog",
-  model:{
-    prop:'visible',
-    event:'change'
-  },
   props: {
     title: {
       type: String,
@@ -49,7 +45,7 @@ export default {
   },
   methods: {
     handleClose() {
-      this.$emit("change", false);
+      this.$emit("update:visible", false);
     },
   },
 };

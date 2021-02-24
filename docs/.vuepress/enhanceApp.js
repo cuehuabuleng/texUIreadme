@@ -1,6 +1,5 @@
 // import Vue from 'vue'
 // 这个是用vue2.x打包过来的lib
-import TexUI from 'tex-ui'
 import 'highlight.js/styles/tomorrow-night.css' 
 import hljs from 'highlight.js'
 import 'tex-ui/dist/tex-ui.css'
@@ -16,10 +15,7 @@ export default ({
     Vue.directive('highlight',function (el) {
       let blocks = el.querySelectorAll('pre code');
       blocks.forEach((block) => {
-        console.log(block)
         hljs.highlightBlock(block)
       })
     })
-
-    Vue.use(TexUI)
   }
