@@ -41,12 +41,10 @@ export default {
   computed: {
     modelValue: {
       get() {
-        console.log('get')
         // 如果外面被group包裹，那就需要返回的是group的值value
         return this.isGroup ? this.RadioGroup.value : this.value;
       },
       set(value) {
-        console.log('set')
         this.isGroup ? this.RadioGroup.$emit('input', value) : this.$emit('input', value)
       },
     },
