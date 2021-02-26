@@ -28,7 +28,6 @@ export default {
     //   这里的model 的作用就是 根据是否有group包裹 绑定不同的值  然后返回给外部或者调用外部的值
     model: {
       get() {
-        console.log('get', this.CheckboxGroup.value)
         return this.isGroup ? this.CheckboxGroup.value : this.value;
       },
       set(value) {
@@ -36,7 +35,6 @@ export default {
         this.isGroup
           ? this.CheckboxGroup.$emit("input", value)
           : this.$emit("input", value);
-          console.log('set', this.CheckboxGroup.value)
       },
     },
 

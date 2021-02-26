@@ -1,5 +1,5 @@
 <template>
-  <div class="tex-input" :class="{ 'tex-input--suffix': showSuffix }">
+  <div class="tex-input" :class="{ 'tex-input--suffix': showSuffix }" :style="{width}">
     <input
       :name="name"
       :type="showPassword ? (passwordVisible ? 'text' : 'password') : type"
@@ -59,6 +59,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    width:{
+      type:String,
+      default:'100%'
+    }
   },
   methods: {
     handleInput(e) {
@@ -123,7 +127,7 @@ export default {
   .tex-input_suffix {
     position: absolute;
     height: 100%;
-    right: 10px;
+    right: 5%;
     top: 0;
     line-height: 40px;
     text-align: center;

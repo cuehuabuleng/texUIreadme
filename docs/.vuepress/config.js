@@ -35,24 +35,10 @@ module.exports = {
                     'pages/button/button',
                     'pages/form/form',
                     'pages/dialog/dialog',
-                    {
-                        title: 'checkbox 多选框',
-                        collapsable: true,
-                        children: [
-                            'pages/checkbox/checkbox',
-                            'pages/checkbox/checkbox-group'
-                        ]
-                    },
+                    'pages/checkbox/checkbox',
                     'pages/input/input',
                     'pages/switch/switch',
-                    {
-                        title: 'radio 单选框',
-                        collapsable: true,
-                        children: [
-                            'pages/radio/radio',
-                            'pages/radio/radio-group'
-                        ]
-                    }
+                    'pages/radio/radio-group'
                 ]
             }
         ],
