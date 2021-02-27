@@ -38,7 +38,7 @@ module.exports = {
                     'pages/checkbox/checkbox',
                     'pages/input/input',
                     'pages/switch/switch',
-                    'pages/radio/radio-group'
+                    'pages/radio/radio'
                 ]
             }
         ],

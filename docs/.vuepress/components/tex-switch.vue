@@ -38,14 +38,11 @@ export default {
   },
   methods: {
     async handleChange() {
-      console.log("handleChange1", this.value);
-
       // 当点击switch的时候，外部会触发change事件
       this.$emit("change", "");
       this.$emit("input", !this.value);
       await this.$nextTick();
       this.setColor();
-      console.log("handleChange2", this.value);
     },
     setColor() {
       if (this.activeColor || this.inactiveColor) {
