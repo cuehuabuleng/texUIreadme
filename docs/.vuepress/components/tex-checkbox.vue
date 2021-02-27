@@ -6,7 +6,7 @@
         type="checkbox"
         class="tex-checkbox_original"
         :name="name"
-        :value="label" 
+        :value="label"
         v-model="model"
       />
     </span>
@@ -31,7 +31,11 @@ export default {
         return this.isGroup ? this.CheckboxGroup.value : this.value;
       },
       set(value) {
-        
+        // 触发change事件给外部监听
+        this.isGroup
+          ? this.CheckboxGroup.$emit("change", value)
+          : this.$emit("change", value);
+          
         this.isGroup
           ? this.CheckboxGroup.$emit("input", value)
           : this.$emit("input", value);
@@ -49,7 +53,7 @@ export default {
     },
   },
   props: {
-    //   这里的value是在单个checkbox使用的时候 起作用 true/false  
+    //   这里的value是在单个checkbox使用的时候 起作用 true/false
     // 上面input绑定的value就是在多个checkbox组合时起作用 因为选中的时候，就是选中input中的value
     value: {
       type: Boolean,
@@ -64,14 +68,14 @@ export default {
       default: "",
     },
   },
-  watch:{
-    value(){
-      console.log('子组件', this.value)
-    }
+  watch: {
+    value() {
+      console.log("子组件", this.value);
+    },
   },
-  mounted(){
-    console.log('子组件',this.value, this.label, this.name)
-  }
+  mounted() {
+    console.log("子组件", this.value, this.label, this.name);
+  },
 };
 </script>
 

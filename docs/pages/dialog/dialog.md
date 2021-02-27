@@ -18,7 +18,7 @@ Dialog 弹出一个对话框，适合需要定制性更大的场景。
         type="primary"
         @click="visible = true"
         >点击打开dialog</tex-button>
-    <tex-dialog title="提示" width="25%" top="200px" :visible.sync="visible">
+    <tex-dialog title="提示" width="25%" top="200px" :visible.sync="visible" @close="handleClose">
         <p>这是一段信息</p>
         <template v-slot:footer>
             <tex-button @click="visible = false">取消</tex-button>
@@ -166,6 +166,11 @@ export default{
                 password:''
             }
         }
+    },
+    methods:{
+      handleClose(){
+        console.log('close')
+      }
     }
 }
 </script>
@@ -186,4 +191,10 @@ export default{
 | —— | Dialog 的内容 |
 | title | Dialog 标题区的内容 |
 | footer | 	Dialog 按钮操作区的内容 |
+
+### Events
+
+| 事件名称 | 说明 | 回调参数 | 
+| :-----| ----: | :----: | :----: | :----: | 
+| close | Dialog 关闭的回调 |——|
 

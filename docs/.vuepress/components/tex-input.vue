@@ -66,11 +66,10 @@ export default {
   },
   methods: {
     handleInput(e) {
-      console.log(e.target.value)
       this.$emit("input", e.target.value);
     },
     clear() {
-      console.log('clear',this.value)
+      this.$emit("clear", "");
       this.$emit("input", "");
     },
     handlePassword() {

@@ -45,6 +45,10 @@ export default {
         return this.isGroup ? this.RadioGroup.value : this.value;
       },
       set(value) {
+        // 提供change事件给外部监听
+        this.isGroup ?
+        this.RadioGroup.$emit('change', value):
+        this.$emit('change', value);
         this.isGroup ? this.RadioGroup.$emit('input', value) : this.$emit('input', value)
       },
     },

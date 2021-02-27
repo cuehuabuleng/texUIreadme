@@ -12,11 +12,12 @@ date: 2020-12-17
   <demo-block class="demo-box">
     <div class="source" slot="source">
     <!-- 展示的组件内容 -->
-      <tex-radio label="1" v-model="value"></tex-radio>
-      <tex-radio label="0" v-model="value"></tex-radio>
+      <tex-radio label="1" v-model="value" @change="handleChange"></tex-radio>
+      <tex-radio label="0" v-model="value" @change="handleChange"></tex-radio>
     </div>
     <div class="highlight" slot="highlight" >
       <!-- desciption -->
+      <p>要使用 <code>Radio</code> 组件，只需要设置<code>v-model</code>绑定变量，选中意味着变量的值为相应 Radio <code>label</code>属性的值，<code>label</code>可以是<code>String</code>、<code>Number</code>或<code>Boolean</code>。</p>
      <div class="description">
      </div>
       <pre v-highlight>
@@ -34,7 +35,7 @@ date: 2020-12-17
   <demo-block class="demo-box">
     <div class="source" slot="source">
     <!-- 展示的组件内容 -->
-        <tex-radio-group v-model="options">
+        <tex-radio-group v-model="options" @change="handleChange">
             <tex-radio label="1">A</tex-radio>
             <tex-radio label="2">B</tex-radio>
             <tex-radio label="3">C</tex-radio>
@@ -42,6 +43,7 @@ date: 2020-12-17
     </div>
     <div class="highlight" slot="highlight" >
       <!-- desciption -->
+      <P>结合<code>tex-radio-group</code>元素和子元素<code>tex-radio</code>可以实现单选组，在<code>tex-radio-group</code>中绑定<code>v-model</code>，在<code>tex-radio</code>中设置好<code>label</code>即可，无需再给每一个<code>tex-radio</code>绑定变量另外，还提供了<code>change</code>事件来响应变化，它会传入一个参数<code>value</code>。</P>
      <div class="description">
      </div>
       <pre v-highlight>
@@ -57,10 +59,10 @@ export default{
     data(){
         return{
             value:'1',
-            options:[],
+            options:'1',
             radiohtml:`<template>
-  <tex-radio v-model="value" label="1">备选项</tex-radio>
-  <tex-radio v-model="value" label="2">备选项</tex-radio>
+  <tex-radio v-model="value" label="1" @change="handleChange">备选项</tex-radio>
+  <tex-radio v-model="value" label="2" @change="handleChange">备选项</tex-radio>
 </template>`,
             radiojs:`export default {
   data() {
@@ -70,7 +72,7 @@ export default{
   },
 };`,
             radiohtml1:`<template>
-         <tex-radio-group v-model="options">
+         <tex-radio-group v-model="options" @change="handleChange">
             <tex-radio label="1">A</tex-radio>
             <tex-radio label="2">B</tex-radio>
             <tex-radio label="3">C</tex-radio>
@@ -79,15 +81,15 @@ export default{
             radiojs1:`export default {
   data() {
     return {
-     options:[]
+     options:'1'
     };
   },
 };`
         }
     },
     methods:{
-        handleChange(){
-            console.log('1')
+        handleChange(value){
+            console.log(value)
         }
     }
 }

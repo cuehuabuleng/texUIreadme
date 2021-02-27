@@ -39,7 +39,7 @@ export default {
   methods: {
     async handleChange() {
       // 当点击switch的时候，外部会触发change事件
-      this.$emit("change", "");
+      this.$emit("change", !this.value);
       this.$emit("input", !this.value);
       await this.$nextTick();
       this.setColor();

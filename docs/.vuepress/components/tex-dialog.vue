@@ -45,6 +45,8 @@ export default {
   },
   methods: {
     handleClose() {
+      // 在关闭的时候，向外触发close时间，给外部监听
+      this.$emit("close",'')
       this.$emit("update:visible", false);
     },
   },

@@ -12,7 +12,7 @@ date: 2020-12-17
   <demo-block class="demo-box">
     <div class="source" slot="source">
     <!-- 展示的组件内容 -->
-        <tex-input v-model="value" placeholder="请输入内容" width='180px'></tex-input>
+        <tex-input v-model="value" placeholder="请输入内容" width='180px' @input="handleInput"></tex-input>
     </div>
     <div class="highlight" slot="highlight" >
       <!-- desciption -->
@@ -53,7 +53,7 @@ date: 2020-12-17
   <demo-block class="demo-box">
     <div class="source" slot="source">
     <!-- 展示的组件内容 -->
-        <tex-input v-model="value2" placeholder="请输入内容" width='180px' clearable></tex-input>
+        <tex-input v-model="value2" placeholder="请输入内容" width='180px' clearable @clear="handleClear"></tex-input>
     </div>
     <div class="highlight" slot="highlight" >
       <!-- desciption -->
@@ -139,6 +139,14 @@ date: 2020-12-17
   },
 };`
             }
+        },
+        methods:{
+          handleInput(val){
+            console.log('handelinput', val)
+          },
+          handleClear(){
+            console.log('clear')
+          }
         }
     }
 </script>
@@ -155,3 +163,9 @@ date: 2020-12-17
 | disabled | 禁用 | boolean |—— |false |
 | width | 输入框长度 | string |—— |180px |
 
+### Input Events
+
+| 事件名称 | 说明 | 回调参数 | 
+| :-----| ----: | :----: | :----: | :----: | 
+| input | 在 Input 值改变时触发 |(value: string / number)|
+| clear | 在点击由 clearable 属性生成的清空按钮时触发 |——|

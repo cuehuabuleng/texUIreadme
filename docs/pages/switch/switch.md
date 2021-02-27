@@ -56,8 +56,8 @@ export default{
         }
     },
     methods:{
-        handleChange(){
-            console.log('handleChange1')
+        handleChange(value){
+            console.log('handleChange1',value)
         }
     }
 }

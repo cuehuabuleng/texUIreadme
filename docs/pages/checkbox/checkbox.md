@@ -15,7 +15,7 @@ date: 2020-12-17
   <demo-block class="demo-box">
     <div class="source" slot="source">
     <!-- 展示的组件内容 -->
-    <tex-checkbox v-model="active"> 是否选中 </tex-checkbox>
+    <tex-checkbox v-model="active" @change="handelCheck"> 是否选中 </tex-checkbox>
     </div>
     <div class="highlight" slot="highlight" >
       <!-- desciption -->
@@ -87,6 +87,11 @@ date: 2020-12-17
   },
 };`
             }
+        },
+        methods:{
+          handelCheck(val){
+            console.log('handelCheck', val)
+          }
         }
     }
 </script>
@@ -98,3 +103,9 @@ date: 2020-12-17
 | label | 选中状态的值（只有在checkbox-group或者绑定对象类型为array时有效） | string / number / boolean |—— |—— |
 | name | 原生 name 属性 | string |—— |—— |
 
+
+### Checkbox Events
+
+| 事件名称 | 说明 | 回调参数 | 
+| :-----| ----: | :----: | :----: | :----: | 
+| change | 当绑定值变化时触发的事件 |更新后的值|
